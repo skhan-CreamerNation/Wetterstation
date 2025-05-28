@@ -48,7 +48,7 @@ Der Aufbau der Schaltung erfolgte auf einem Breadboard unter Verwendung der folg
 * **DHT11 Sensor:** Angeschlossen an einen digitalen GPIO-Pin des ESP32, um Temperatur und Luftfeuchtigkeit zu messen.
 * **ALLNET B15 Tilt Sensor:** Angeschlossen an einen weiteren digitalen GPIO-Pin, um Neigungsereignisse zu erkennen.
 
-Eine detaillierte Skizze der Schaltung wird in Kürze hier eingefügt.
+
 
 ### 4.2 Code
 
