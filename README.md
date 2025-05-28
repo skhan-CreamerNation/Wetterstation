@@ -73,3 +73,33 @@ Dieser Code ist kommentiert, um seine Funktionalität und die einzelnen Schritte
 ### 4.3 Bilder und Schaltungen
 
 ![image](https://github.com/user-attachments/assets/67db4e9c-3a27-4f3e-a2b8-0500db868cb3)
+
+## 5. Quellen
+
+*[2] „Arduino - DHT11 | Arduino Tutorial“, Arduino Getting Started. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://arduinogetstarted.com/tutorials/arduino-dht11*
+
+*[3] „Blynk: a low-code IoT software platform for businesses and developers“. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://blynk.io*
+
+*[4] „Chart.js“. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://www.w3schools.com/js/js_graphics_chartjs.asp*
+
+*[5] „ESP32 - MySQL“, ESP32 Tutorial. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://esp32io.com/tutorials/esp32-mysql*
+
+*[6] „ESP32 - OLED“, ESP32 Tutorial. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://esp32io.com/tutorials/esp32-oled*
+
+*[7] S. Santos, „ESP32 Deep Sleep with Arduino IDE and Wake Up Sources | Random Nerd Tutorials“. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://randomnerdtutorials.com/esp32-deep-sleep-arduino-ide-wake-up-sources/*
+
+*[8] S. Santos, „ESP32 with DHT11/DHT22 Temperature and Humidity Sensor using Arduino IDE | Random Nerd Tutorials“. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-sensor-arduino-ide/*
+
+*[9] Tiago, „ESP32-C3 Super Mini Real-Time Clock with OLED Display“. Zugegriffen: 1. März 2025. [Online]. Verfügbar unter: https://www.edgemicrotech.com/esp32-c3-super-mini-real-time-clock-with-oled-display/*
+
+*[10] ESP32Async/ESPAsyncWebServer. (1. März 2025). C++. ESP32 Asynchronous Networking. Zugegriffen: 1. März 2025. [Online]. Verfügbar unter: https://github.com/ESP32Async/ESPAsyncWebServer*
+
+*[11] „How To Create a Color Picker“. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://www.w3schools.com/howto/howto_html_colorpicker.asp*
+
+*[12] T. Digital, „Interfacing WS2812B Neopixel LED Strip with ESP32“, theoryCIRCUIT - Do It Yourself Electronics Projects. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://theorycircuit.com/esp32-projects/interfacing-ws2812b-neopixel-led-strip-with-esp32/*
+
+*[13] „Remote control Arduino - RemoteXY“. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://remotexy.com/*
+
+*[14] title, „Send Messages to Discord from ESP32 with Discord Webhooks“. Zugegriffen: 18. Februar 2025. [Online]. Verfügbar unter: https://www.espboards.dev/blog/send-message-from-esp32-to-discord/*
+
+*[15] tzapu, tzapu/WiFiManager. (1. März 2025). C++. Zugegriffen: 1. März 2025. [Online]. Verfügbar unter: https://github.com/tzapu/WiFiManager*
