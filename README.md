@@ -75,8 +75,11 @@ Dieser Code ist kommentiert, um seine Funktionalität und die einzelnen Schritte
 #### Schaltplan
 ![image](https://github.com/user-attachments/assets/67db4e9c-3a27-4f3e-a2b8-0500db868cb3)
 
-#### Schaltung aufgebaut auf dem Breadboard
+#### Schaltung mit Status-LED während Normaltemperatur
 ![image](https://github.com/user-attachments/assets/19ab7e6e-090d-4b40-a15c-7943c9d8e557)
+
+#### Schaltung mit Status-LED während erhöhter Temperatur
+![image](https://github.com/user-attachments/assets/fc9ed4fb-bdf2-40f0-b06b-9b348b47b915)
 
 #### Webinterface während Messung
 ![image](https://github.com/user-attachments/assets/f796a97d-983b-456c-829e-16b31bd87291)
