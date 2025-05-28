@@ -54,53 +54,48 @@ Der Aufbau der Schaltung erfolgte auf einem Breadboard unter Verwendung der folg
 
 Der Code für die Wetterstation wird hier zur Verfügung gestellt. Er beinhaltet die Initialisierung der Sensoren, das Auslesen der Daten und die Ausgabe über die serielle Schnittstelle.
 
-```c++
-// Hier wird der Code für die Wetterstation eingefügt
-// Der Code wird später hochgeladen und hier eingefügt.
-// Beispiel:
-/*
-#include <DHT.h>
+// === Funktion zum Auslesen der Sensorwerte ===
+void readSensorData() {
+  // Temperatur vom DHT11-Sensor auslesen (in °C)
+  float temperature = dht.readTemperature();
+  
+  // Luftfeuchtigkeit vom DHT11-Sensor auslesen (in %)
+  float humidity = dht.readHumidity();
+  
+  // Neigungssensor (Tilt) abfragen – liefert true, wenn geneigt
+  bool tilt = digitalRead(TILT_PIN);
 
-#define DHTPIN 4      // Digital pin connected to the DHT sensor
-#define DHTTYPE DHT11 // DHT 11
-
-DHT dht(DHTPIN, DHTTYPE);
-
-void setup() {
-  Serial.begin(9600);
-  Serial.println(F("DHT11 Test!"));
-  dht.begin();
-}
-
-void loop() {
-  // Wait a few seconds between measurements.
-  delay(2000);
-
-  // Reading temperature or humidity takes about 250 milliseconds!
-  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
-  float h = dht.readHumidity();
-  // Read temperature as Celsius (the default)
-  float t = dht.readTemperature();
-
-  // Check if any reads failed and exit early (to try again).
-  if (isnan(h) || isnan(t)) {
-    Serial.println(F("Failed to read from DHT sensor!"));
-    return;
+  // Prüfen, ob die Sensorwerte gültig sind (nicht "NaN")
+  if (isnan(temperature) || isnan(humidity)) {
+    Serial.println("Fehler beim Auslesen des DHT11-Sensors!");
+    return; // Keine Speicherung bei Fehler
   }
-
-  Serial.print(F("Humidity: "));
-  Serial.print(h);
-  Serial.print(F("%  Temperature: "));
-  Serial.print(t);
-  Serial.println(F("°C "));
+  // Sensorwerte in der globalen Struktur 'currentData' speichern
+  currentData.temp = temperature;
+  currentData.hum = humidity;
+  currentData.tilted = tilt;
+  currentData.timestamp = timeClient.getFormattedTime(); // Aktuelle Uhrzeit dazuspeichern
+  Serial.println("Sensorwerte aktualisiert");
 }
-*/
-```
+// === HTTP-Handler-Funktion zur Ausgabe der aktuellen Sensordaten als JSON ===
+void handleCurrentData() {
+  StaticJsonDocument<256> doc; // JSON-Dokument mit max. 256 Byte
+
+  // Sensorwerte in das JSON-Dokument eintragen
+  doc["temp"] = currentData.temp;       // Temperatur in °C
+  doc["hum"] = currentData.hum;         // Luftfeuchtigkeit in %
+  doc["tilt"] = currentData.tilted;     // Neigungsstatus (true/false)
+  doc["time"] = currentData.timestamp;  // Zeitstempel im Format HH:MM:SS
+
+  String response;
+  serializeJson(doc, response);         // JSON-Dokument in String umwandeln
+  // JSON-Antwort mit HTTP-Code 200 (OK) an den Browser senden
+  server.send(200, "application/json", response);
+}
+
 Dieser Code ist kommentiert, um seine Funktionalität und die einzelnen Schritte der Datenverarbeitung zu erklären. Er initialisiert den DHT11-Sensor, liest in regelmäßigen Abständen Temperatur- und Luftfeuchtigkeitswerte aus und gibt diese auf der seriellen Konsole aus. (Der Code für den Tilt Sensor wird noch ergänzt, sobald er vorhanden ist.)
 
 ### 4.3 Bilder und Schaltungen
 
 Hier werden Bilder und Schemata der aufgebauten Schaltung eingefügt.
 
----
-Feel free to upload your actual code and add images of your project setup. Let me know if you need any adjustments or further sections!
