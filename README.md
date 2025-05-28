@@ -3,6 +3,7 @@
 ## Eine einfache Wetterstation mit Temperatur- & Luftfeuchtigkeitssensor
 
 **Verfasser:** Simon Khan, Josef Ibrahim
+
 **Datum:** 28.05.2025
 
 ---
